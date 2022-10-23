@@ -1,0 +1,15 @@
+*{box-sizing: border-box;}
+body{background-color: bisque;font-family: Verdana, Geneva, Tahoma, sans-serif;max-width: 1200px;}
+
+header{text-align: center;background-color: black;color: aliceblue;max-width: 1200px;}
+
+h1{text-align: left;font-size: 25px;font-weight: 700;font-family: Georgia, 'Times New Roman', Times, serif;padding-left: 30px;}
+
+.header_photo{border-radius: 211px;margin:0;border-style: dashed; width: 150px;height: 150px;}
+/* .foto_main{max-width: 1200px;} */
+main{display: flex;justify-items:center}
+
+
+li{text-decoration: none; padding: 0 10px 0 10px; }
+.foto{display: flex;flex-wrap: wrap; }
+
