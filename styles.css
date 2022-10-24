@@ -24,9 +24,16 @@ li{text-decoration: none; padding: 0 10px 0 10px; }
 }
 .blok2{padding-top: 20px;display: flex;color: red; font-size: 25px;flex-wrap: wrap;}
 
+.letter{height: 400px;width: 1200px;scroll-snap-type: calc();}
 
-.footer { 
+footer { height: 450px;background-color: black;margin: 30px 0;   
 }
+.footer{
+    width: 1200px;
+    top: 100px;
+    max-width: 1200px; 
+    max-height: 100%;
+    }
 
 
 
