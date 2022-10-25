@@ -27,39 +27,73 @@
     <main class="main"> 
       <div class="foto1">
         <ul class="foto">
-          <li class="f1"><img src="imiges/f1.png" alt=""></li>
-          <li><img src="imiges/Image7.png" alt=""></li>
+          <li class="f1"><a href=""><img src="imiges/f1.png" alt=""></a></li>
+          <li><a href="imiges/Card.jpg"><img src="imiges/Image7.png" alt=""></a></li>
           
-          <li class="f3"><img src="imiges/Image8.png" alt=""></li>
+          <li class="f3"><a href="imiges/Card5.jpg"><img src="imiges/Image8.png" alt=""></a></li>
           <li class="f4"><img src="imiges/imege8a.png" alt=""></li>
-          <li class="f5"><img src="imiges/Image9.png" alt=""></li>
-          <li class="f6"><img src="imiges/Image.png" alt=""></li>
-          <li class="f7"><img src="imiges/Image10.png" alt=""></li>
-          <li class="f8"><img src="imiges/Image11.png" alt=""></li>
-          <li class="f9"><img src="imiges/Image12.png" alt=""></li>
-        <li class="f10"><img src="imiges/Image13.png" alt=""></li>
+          <li class="f5"><a href="imiges/Card2.jpg"><img src="imiges/Image9.png" alt=""></a></li>
+          <li class="f6"><a href="imiges/Card1.jpg"><img src="imiges/Image.png" alt=""></a></li>
+          <li class="f7"><a href="imiges/Card3.jpg"><img src="imiges/Image10.png" alt=""></a></li>
+          <li class="f8"><a href=""><img src="imiges/Image11.png" alt=""></a></li>
+          <li class="f9"><a href="imiges/Card6.jpg"><img src="imiges/Image12.png" alt=""></a></li>
+        <li class="f10"><a href="imiges/Card8.jpg"><img src="imiges/Image13.png" alt=""></a></li>
         <li  class="f11"><img src ="imiges/Image15.png" alt=""></li>
-        <li  class="f12"><img src="imiges/Image16.png" alt=""></li>
+        <li  class="f12"><a href="imiges/Card9.jpg"><img src="imiges/Image16.png" alt=""></a></li>
         <li  class="f13"><img src="imiges/Image17.png" alt=""></li>
-        <li  class="f14"><img src="imiges/Image18.png" alt=""></li>
+        <li  class="f14"><a href="imiges/Card10.jpg"><img src="imiges/Image18.png" alt=""></a></li>
         <li><img src="imiges/Image18a.png" alt=""></li>
-        <li><img src="imiges/Image19.png" alt=""></li>
-        <li><img src="imiges/Image20.png" alt=""></li>
-        <li><img src="imiges/Image21.png" alt=""></li>
+        <li><a href="imiges/Card12.jpg"><img src="imiges/Image19.png" alt=""></a></li>
+        <li><a href="imiges/Card7.jpg"><img src="imiges/Image20.png" alt=""></a></li>
+        <li><a href="imiges/Card11.jpg"><img src="imiges/Image21.png" alt=""></a></li>
         <li><img src="imiges/Image25.png" alt=""></li> 
 
          
         
         </ul>    
-      </div>
-      <div><ul class="foto2">
-        
-        
-
-      </ul></div>
-      <div><ul class="foto3">
-        
-      </ul></div> 
+        <script type="text/javascript">
+          all_images = new Array ("image/img_1.png","image/img_2.png","image/img_3.png","image/img_4.png");
+          all_text = new Array ("index.php","forum/index.php","map.php","support.php");
+          var ImgNum = 0;
+          var ImgLength = all_images.length - 1;
+          var delay = 2500;
+          var lock = false;
+          var run;
+          
+          function chgImg(direction) {
+          if (document.images) {
+            ImgNum = ImgNum + direction;
+            if (ImgNum > ImgLength) { ImgNum = 0; }
+            if (ImgNum < 0) { ImgNum = ImgLength; }
+            document.getElementById("image_link").href =all_text[ImgNum];
+            document.slide_show.src = all_images[ImgNum];
+          }
+          }
+          
+          function auto() {
+          if (lock == true) {
+            lock = false;
+            window.clearInterval(run);
+          }
+          else if (lock == false) {
+            lock = true;
+            run = setInterval("chgImg(1)", delay);
+          }
+          }
+          auto();
+          </script>
+          
+          
+          <table style="margin: 0 auto;">
+          <tr style="text-align: center;">
+            <td colspan="3"><img src="image/img_1.png" name="slide_show"></td>
+          </tr>
+          <tr>
+            <td style="text-align: right;"><a href="javascript:chgImg(-1)">Предыдущая</a></td>
+            <td style="text-align: center;"><a href="javascript:auto()">Старт/Стоп</a></td>
+            <td style="text-align: left;"><a href="javascript:chgImg(1)">Следующая</a></td>
+          </tr>
+          </table>
     
 
     </main>
