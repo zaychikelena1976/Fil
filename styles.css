@@ -24,8 +24,14 @@ li{ padding: 0 10px 0 10px; text-decoration: none;list-style-type: none;}
 .blok2{padding-top: 20px;display: flex;color: red; font-size: 25px;flex-wrap: wrap;}
 
 .letter{height: 400px;width: 1200px;scroll-snap-type: calc();}
+    /* Contacts */
+button{background-color:yellow; left: 512px;font-weight: 500;
+    font-size: 16px;    line-height: 1.63;cursor: pointer;border: none;}    
 
-footer { height: 450px;background-image: -moz-linear-gradient();margin: 30px 0;   
+.letter{color: red;}
+
+    /* footer */
+footer { background-image:;margin: 30px 0;  display: flex; 
 }
 .footer{
     width: 1200px;
